@@ -7,7 +7,7 @@ $breakpoint-medium: 800px
 $breakpoint-large: 1000px
 
 html
-  overflow-y: auto
+  overflow-y: hidden
 
 body
   display: flex
@@ -47,23 +47,23 @@ body
 .profile-information
   display: flex
   flex-direction: column
-  justify-content: center
   height: 50%
-  padding: 0 1em
+  padding: 1em
 
-  @media (min-width: 400px)
+  @media (min-width: $breakpoint-tiny)
     height: 40%
 
-  @media (min-width: 600px)
+  @media (min-width: $breakpoint-small)
+    justify-content: center
     height: auto
     width: 50%
 
-  @media (min-width: 800px)
+  @media (min-width: $breakpoint-medium)
     width: 60%
-    padding: 0 2em
+    padding: 2em
 
-  @media (min-width: 1000px)
-    padding: 0 3em
+  @media (min-width: $breakpoint-large)
+    padding: 3em
 
 .profile-links
   margin-top: 1em
