@@ -1,9 +1,10 @@
+$font-color: white
+$icon-size: 2em
+
 $breakpoint-tiny: 400px
 $breakpoint-small: 600px
 $breakpoint-medium: 800px
 $breakpoint-large: 1000px
-
-$icon-size: 2em
 
 html
   overflow-y: auto
@@ -13,7 +14,7 @@ body
   flex-direction: column
   height: 100vh
   background: lighten(black, 5%)
-  color: white
+  color: $font-color
   font-family: 'Open Sans', sans-serif
   font-size: 20px
   line-height: 1.5
@@ -69,14 +70,14 @@ body
 
   a
     display: inline-block
-    color: darken(white, 75%)
+    color: darken($font-color, 70%)
     transition: color .2s
 
     &:not(:last-child)
       margin-right: .75em
 
     &:hover, &:focus
-      color: white
+      color: inherit
 
     &:focus
       outline: none
@@ -84,3 +85,7 @@ body
     svg
       height: $icon-size
       width: $icon-size
+
+    @media (hover: none)
+      &, &:hover, &:focus
+        color: darken($font-color, 20%)
