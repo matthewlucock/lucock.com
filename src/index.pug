@@ -2,13 +2,23 @@ doctype html
 html
   head
     meta(charset='utf8')
+    title Matt Lucock
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(
       href='https://fonts.googleapis.com/css?family=Open+Sans'
       rel='stylesheet'
     )
     link(href='main.css' rel='stylesheet')
-    title Matt Lucock
+    script(
+      src="https://www.googletagmanager.com/gtag/js?id=UA-123665716-1"
+      async
+    )
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-123665716-1');
   
   body
     .profile-photo
