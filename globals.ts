@@ -1,6 +1,5 @@
 export const CSS_FILE_PATH = 'main.css'
 export const PHOTO_PATH = 'assets/photo.jpg'
-// Also update `test` script in `package.json` when this changes
 export const PUBLIC_DIRECTORY = 'public'
 
 interface Breakpoints {
