@@ -2,10 +2,10 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
-    "build": "ts-node code/build",
+    "build": "ts-node scripts/build",
     "test": "html-validate public && csstree-validator public",
     "process": "npm run lint && npm run build && npm run test",
-    "publish": "npm run process & ts-node publish"
+    "publish": "npm run process & ts-node scripts/publish"
   },
   "devDependencies": {
     "@emotion/cache": "^10.0.29",

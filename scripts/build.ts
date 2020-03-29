@@ -4,8 +4,8 @@ import { emptyDir, copy, readFile, writeFile } from 'fs-extra'
 
 import { staticallyRenderComponent } from './util/statically-render-component'
 
-import { CSS_FILE_PATH, PHOTO_PATH, PUBLIC_DIRECTORY } from './globals'
-import { Page } from './page'
+import { CSS_FILE_PATH, PHOTO_PATH, PUBLIC_DIRECTORY } from '../globals'
+import { Page } from '../src/page'
 
 const FILES_TO_COPY = ['CNAME', PHOTO_PATH]
 
