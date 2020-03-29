@@ -8,6 +8,7 @@ import { CSS_FILE_PATH, PHOTO_PATH, PUBLIC_DIRECTORY } from '../globals'
 import { Page } from '../src/page'
 
 const FILES_TO_COPY = ['CNAME', PHOTO_PATH]
+const CSS_RESET_PATH = 'node_modules/ress/dist/ress.min.css'
 
 const build = async (): Promise<void> => {
   await emptyDir(PUBLIC_DIRECTORY)
@@ -22,7 +23,7 @@ const build = async (): Promise<void> => {
     writeFile(path.join(PUBLIC_DIRECTORY, 'index.html'), html),
 
     (async (): Promise<void> => {
-      const reset = await readFile('node_modules/ress/dist/ress.min.css', 'utf8')
+      const reset = await readFile(CSS_RESET_PATH, 'utf8')
       css = reset + css
       await writeFile(path.join(PUBLIC_DIRECTORY, CSS_FILE_PATH), css)
     })()
