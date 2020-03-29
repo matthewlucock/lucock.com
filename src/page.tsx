@@ -68,6 +68,15 @@ const Content = styled.div`
   max-width: 800px;
 `
 
+const List = styled.ul`
+  padding-left: 1em;
+`
+
+const Link = styled.a`
+  color: inherit !important;
+  text-decoration: underline;
+`
+
 export const Page: React.FC = () => (
   <html lang='en'>
     <HeadElement />
@@ -77,10 +86,23 @@ export const Page: React.FC = () => (
       <ContentWrapper>
         <Content>
           <p>
-            <strong>Matt Lucock</strong> is a programmer and front-end web developer from the
-            Central Coast and Sydney, Australia.
+            <strong>Matt Lucock</strong> is
+            <List>
+              <li>
+                a web developer and programmer from the Central Coast and Sydney, Australia.
+              </li>
+              <li>
+                a young mental health advocate and{' '}
+                <Link
+                  href='https://headspace.org.au/about-us/headspace-youth-national-reference-group/#Matt-Lucock'
+                  target='_blank'
+                >
+                  member of the Youth National Reference Group
+                </Link>{' '}
+                at headspace National Youth Mental Health Foundation.
+              </li>
+            </List>
           </p>
-
           <PersonalLinks />
         </Content>
       </ContentWrapper>

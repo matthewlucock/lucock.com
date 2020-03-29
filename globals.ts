@@ -10,7 +10,7 @@ export const BREAKPOINTS: Breakpoints = {
   tiny: '400px',
   small: '600px',
   medium: '800px',
-  large: '1000px'
+  large: '1200px'
 }
 
 export const FONT_COLOR = 'white'
