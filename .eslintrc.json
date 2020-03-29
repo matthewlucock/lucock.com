@@ -1,0 +1,9 @@
+{
+  "extends": [ "standard-with-typescript", "standard-react" ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": "./tsconfig.json" },
+
+  "rules": {
+    "max-len": [ "error", { "code": 100, "ignoreStrings": true } ]
+  }
+}
