@@ -4,6 +4,8 @@
   "parserOptions": { "project": "./tsconfig.json" },
 
   "rules": {
-    "max-len": [ "error", { "code": 100, "ignoreStrings": true } ]
+    "max-len": [ "error", { "code": 100, "ignoreStrings": true } ],
+
+    "@typescript-eslint/strict-boolean-expressions": "off"
   }
 }
